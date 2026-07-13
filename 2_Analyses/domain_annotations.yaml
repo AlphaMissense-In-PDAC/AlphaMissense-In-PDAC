@@ -1,0 +1,52 @@
+# Protein domain annotations for PDAC driver genes
+# Categories: core_function | other_ppi | reg_linker
+#
+# Rendering behaviour:
+#   - Default: domain renders as a full-height colored block.
+#   - render: spine  →  domain renders as a thin colored segment along the protein
+#                       backbone (used for structural linker regions, e.g. SMAD4 Linker).
+#                       Label is placed below the spine in italic text.
+
+CATEGORIES:
+  core_function:
+    color: "#44AA99"           # teal (Tol muted)
+    display_label: "Core Functional"
+  other_ppi:
+    color: "#EE8866"           # orange (Tol muted)
+    display_label: "Other PPI"
+  reg_linker:
+    color: "#DDCC77"           # light yellow (Tol muted)
+    display_label: "Regulatory / Linker"
+
+plot_config:
+  tcga_color:  "#E69F00"       # orange — PDAC somatic bars
+  g1000_color: "#56B4E9"       # cyan   — healthy germline bars
+  am_colorbar:
+    cmap:  "RdBu_r"
+    ticks: [0, 0.34, 0.564, 1.0]
+    ticklabels: ["0.0 (benign)", "0.34", "0.56", "1.0 (pathogenic)"]
+
+KRAS:
+  - {name: "P-loop",   label: "PL",   start: 10,  end: 17,  category: core_function}
+  - {name: "Switch I", label: "SwI",  start: 30,  end: 38,  category: core_function}
+  - {name: "Switch II",label: "SwII", start: 60,  end: 76,  category: core_function}
+  - {name: "HVR",             start: 167, end: 189, category: reg_linker}
+
+TP53:
+  - {name: "TAD",             start: 1,   end: 61,  category: reg_linker}
+  - {name: "Pro-rich",        start: 64,  end: 92,  category: reg_linker}
+  - {name: "DNA Binding",     start: 96,  end: 292, category: core_function}
+  - {name: "TET",             start: 324, end: 356, category: other_ppi}
+  - {name: "CTD",             start: 364, end: 393, category: reg_linker}
+
+SMAD4:
+  - {name: "MH1",             start: 18,  end: 142, category: core_function}
+  - {name: "Linker",          start: 143, end: 322, category: reg_linker, render: spine}
+  - {name: "MH2",             start: 323, end: 552, category: core_function}
+  - {name: "SAD",             start: 275, end: 320, category: reg_linker}
+
+CDKN2A:
+  - {name: "ANK1",            start: 11,  end: 40,  category: other_ppi}
+  - {name: "ANK2",            start: 44,  end: 72,  category: other_ppi}
+  - {name: "ANK3",            start: 77,  end: 106, category: other_ppi}
+  - {name: "ANK4",            start: 110, end: 139, category: other_ppi}
