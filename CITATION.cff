@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it as below. This is a
+  placeholder citation for the code itself; it will be updated once
+  the associated research is published.
+type: software
+title: "AlphaMissense in Pancreatic Ductal Adenocarcinoma (PDAC)"
+authors:
+  - family-names: "van der Sommen"
+    given-names: "Felix"
+    email: felixvandersommen@gmail.com
+    orcid: "https://orcid.org/0009-0009-2177-3874"
+  - family-names: "Eeltink"
+    given-names: "Daan"
+    email: daan.eeltink@gmail.com
+    orcid: "https://orcid.org/0009-0000-2138-3336"
+date-released: 2026-07-13
+url: "https://github.com/AlphaMissense-In-PDAC/AlphaMissense-In-PDAC"
+license: MIT
