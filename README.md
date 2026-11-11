@@ -49,6 +49,7 @@ A sequence of key objectives (KO1-KO7) analyzing the merged dataset.
 - **TCGA-PAAD** somatic mutations, via cBioPortal (GRCh38)
 - **1000 Genomes Project** germline variants, 2022 high-coverage phased release
 - **AlphaMissense** hg38 pathogenicity scores ([Zenodo record 10813168](https://zenodo.org/records/10813168))
+  - The full table as used here (`alphamissense_hg38.parquet`, 564 MB) is archived with this project's data at [doi.org/10.5281/zenodo.24132119](https://doi.org/10.5281/zenodo.24132119). KO4 reads a small subset shipped in `3_Data/`, built by `1_Pipeline/5_AM_KO4_Subset.ipynb`.
 - **Reactome** and **MSigDB Hallmark** gene sets, for pathway-level feature construction
 
 Data file paths referenced in the notebooks are specific to the machine they were developed on and will need to be adjusted locally before rerunning any notebook.
