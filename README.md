@@ -27,15 +27,14 @@ Builds the annotated mutation datasets used by all downstream analyses.
 | `3_Merge_TCGA_1000G.ipynb` | Merges the somatic and germline tables into a single combined dataset |
 
 ### `2_Analyses/`
-A sequence of key objectives (KO1-KO7) analyzing the merged dataset.
+A sequence of key objectives (KO1-KO7; the former KO2 was merged into KO1 and KO5) analyzing the merged dataset.
 
 | Notebook | Purpose |
 |---|---|
-| `KO1_AM_somatic_vs_germline.ipynb` | Compares AlphaMissense score distributions between somatic and germline variants |
-| `KO2_AM_driver_genes.ipynb` | Examines AlphaMissense scores in the four canonical driver genes and additional driver-like candidates |
+| `KO1_AM_somatic_vs_germline.ipynb` | Compares AlphaMissense score distributions between somatic and germline variants, genome-wide and in the four canonical driver genes (Figure 1) |
 | `KO3_AM_vs_BLOSUM62.ipynb` | Compares AlphaMissense against BLOSUM62 as a diagnostic score |
 | `KO4_domain_AM_3D.ipynb` | Maps pathogenicity scores and mutation hotspots onto protein domains and 3D structures |
-| `KO5_AM_threshold_classifier.ipynb` | Builds a single-feature AlphaMissense-threshold classifier for PDAC vs. healthy |
+| `KO5_AM_threshold_classifier.ipynb` | Builds a single-feature AlphaMissense-threshold classifier for PDAC vs. healthy; selects the highly pathogenic hotspots and driver-like genes (Figure 6) |
 | `KO6_1_Unsupervised_PCA.ipynb` | Unsupervised PCA/clustering on gene- and pathway-level mutation features |
 | `KO6_2_LDA_Overfit.ipynb` | Full-data (overfit) LDA used for pathway feature selection and ranking |
 | `KO6_3_Healthy_PDAC_LDA.ipynb` | Cross-validated pathway-level LDA classifier, Healthy vs. PDAC |
